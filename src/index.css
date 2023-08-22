@@ -9,6 +9,49 @@
   --white: hsl(0, 0%, 100%);
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font: inherit;
+}
+
 body {
   background-color: var(--very-light-grayish-cyan);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--light-grayish-cyan);
+}
+
+.card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.spliter {
+  color: var(--very-dark-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.input-label {
+  display: block;
+  color: var(--grayish-cyan);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 8px;
+  background-color: var(--very-light-grayish-cyan);
+  text-align: right;
+  color: var(--grayish-cyan);
 }

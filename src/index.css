@@ -30,6 +30,7 @@ body {
 }
 
 .card {
+  display: flex;
   background-color: var(--white);
   padding: 2rem;
   border-radius: 0.5rem;
@@ -54,4 +55,50 @@ body {
   background-color: var(--very-light-grayish-cyan);
   text-align: right;
   color: var(--grayish-cyan);
+}
+
+.outputs {
+  background-color: var(--very-dark-cyan);
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.field__title {
+  color: var(--white);
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.per-person {
+  color: var(--grayish-cyan);
+  font-size: 0.7rem;
+}
+
+.tip-output {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  color: var(--strong-cyan);
+  font-size: 2.5rem;
+}
+
+.reset {
+  display: flex;
+
+  border: none;
+  border-radius: 5px;
+  padding-inline: 4rem;
+  padding-block: 0.3rem;
+  margin-inline: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 5rem;
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
 }

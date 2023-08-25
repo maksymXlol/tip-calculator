@@ -1,3 +1,10 @@
+import PropTypes from "prop-types";
+
+InputField.propTypes = {
+  label: PropTypes.string,
+  id: PropTypes.string,
+};
+
 function InputField({ label, id }) {
   return (
     <div className="input-container">

@@ -1,17 +1,18 @@
-function OutputField() {
-  <div className="output">
-    <div className="amount">
-      <h2 className="amount__tip">Tip Amount</h2>
-      <p className="person">/ person</p>
-      <div className="tip-output">0.00</div>
+import PropTypes from "prop-types";
+
+OutputField.propTypes = {
+  title: PropTypes.string,
+  amount: PropTypes.number,
+};
+
+function OutputField({ title, amount }) {
+  return (
+    <div className="field">
+      <h2 className="field__title">{title}</h2>
+      <p className="per-person">/ person</p>
+      <div className="tip-output">{amount}</div>
     </div>
-    <div className="total">
-      <h2 className="amount__tip">Total</h2>
-      <p className="person">/ person</p>
-      <div className="tip-output">0.00</div>
-    </div>
-    <button className="reset-btn">reset</button>
-  </div>;
+  );
 }
 
 export default OutputField;

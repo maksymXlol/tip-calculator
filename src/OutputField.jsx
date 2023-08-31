@@ -6,11 +6,15 @@ OutputField.propTypes = {
 };
 
 function OutputField({ title, amount }) {
+  const valueTrim = (value) => {
+    return Math.floor(value * 100) / 100;
+  };
+
   return (
     <div className="field">
       <h2 className="field__title">{title}</h2>
       <p className="per-person">/ person</p>
-      <div className="tip-output">{amount}</div>
+      <div className="tip-output">{valueTrim(amount)}</div>
     </div>
   );
 }

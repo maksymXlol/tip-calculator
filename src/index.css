@@ -20,6 +20,16 @@ body {
   background-color: var(--very-light-grayish-cyan);
 }
 
+input {
+  width: 100%;
+  cursor: pointer;
+}
+
+input:hover,
+input:focus {
+  outline: 1px solid var(--strong-cyan);
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -36,10 +46,23 @@ body {
   border-radius: 0.5rem;
 }
 
+.card > * {
+  flex-basis: 50%;
+}
+
 .spliter {
   color: var(--very-dark-cyan);
   text-transform: uppercase;
   letter-spacing: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
 }
 
 .input-label {
@@ -55,6 +78,41 @@ body {
   background-color: var(--very-light-grayish-cyan);
   text-align: right;
   color: var(--grayish-cyan);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1rem;
+}
+
+.grid > * {
+  padding-block: 0.8rem;
+  border-radius: 0.3rem;
+  padding-inline: 0.6rem;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.tip__btn {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.tip__btn:focus,
+.tip__btn:hover {
+  background-color: var(--strong-cyan);
+}
+
+.tip__btn.active {
+  background-color: var(--strong-cyan);
+}
+
+.custom {
+  text-align: right;
+  background-color: var(--very-light-grayish-cyan);
 }
 
 .outputs {

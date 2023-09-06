@@ -5,14 +5,20 @@ InputField.propTypes = {
   id: PropTypes.string,
   value: PropTypes.number,
   onChange: PropTypes.func,
+  validation: PropTypes.func,
 };
 
-function InputField({ label, id, value, onChange }) {
+function InputField({ label, id, value, onChange, validation }) {
+  const error = validation();
+
   return (
     <div className="input-container">
-      <label className="input-label" htmlFor={id}>
-        {label}
-      </label>
+      <div className="flex">
+        <label className="input-label" htmlFor={id}>
+          {label}
+        </label>
+        {!!error && <p className="error">can't be zero</p>}
+      </div>
       <input
         min={0}
         type="number"

@@ -7,6 +7,8 @@ function App() {
   const [people, setPeople] = useState(1);
   const [tip, setTip] = useState(5);
 
+  // useReducer
+
   const handleReset = () => {
     setBill(0);
     setPeople(1);
@@ -39,7 +41,7 @@ function App() {
               if (people <= 0) {
                 return "can't be zero";
               }
-              return "";
+              return;
             }}
           />
           <div className="tip">Select Tip %</div>

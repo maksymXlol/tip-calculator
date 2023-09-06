@@ -17,7 +17,7 @@ function InputField({ label, id, value, onChange, validation }) {
         <label className="input-label" htmlFor={id}>
           {label}
         </label>
-        {!!error && <p className="error">can't be zero</p>}
+        {!!error && <p className="error">{error}</p>}
       </div>
       <input
         min={0}
